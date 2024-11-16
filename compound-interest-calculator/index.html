@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Interest Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Compound Interest Calculator</h1>
+            <p class="description">
+                Welcome to the Compound Interest Calculator! This tool helps you calculate the growth of your savings or investments over time. 
+                You can track multiple accounts and see how your balance grows with different interest rates, contributions, and time periods.
+            </p>
+            <p class="instructions">
+                <strong>How to use:</strong> 
+                <ul>
+                    <li>Click "Add Account" to create a new account entry.</li>
+                    <li>Fill in the account details (name, principal, contributions, interest rate, and time period).</li>
+                    <li>Click "Calculate" to see how each account will grow.</li>
+                    <li>Your data will be saved in your browser only, so you don't need to re-enter it next time. This data is not stored in any database.</li>
+                </ul>
+            </p>
+        </header>
+
+        <div id="account-list">
+            <!-- Account entry form will be appended here -->
+        </div>
+
+        <div class="buttons">
+            <button onclick="addAccountForm()">Add Account</button>
+            <button onclick="calculateInterest()">Calculate Compound Interest</button>
+        </div>
+
+        <div id="results">
+            <!-- Results will be displayed here -->
+        </div>
+        <div id="graph-container">
+            <canvas id="growth-chart" width="400" height="200"></canvas>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

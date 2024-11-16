@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Apps Created with AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #202123;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .intro {
+            max-width: 900px;
+            margin: 40px auto;
+            text-align: center;
+            font-size: 1.1em;
+            color: #555;
+            padding: 0 20px;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .app-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+
+        .app-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .app-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .app-card h3 {
+            margin-top: 20px;
+            font-size: 1.6em;
+            color: #202123;
+        }
+
+        .app-card p {
+            color: #777;
+            font-size: 1em;
+            margin-top: 15px;
+        }
+
+        .app-card a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #0061F2;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .app-card a:hover {
+            background-color: #004bb5;
+        }
+
+        footer {
+            background-color: #202123;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        .contact {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .contact a {
+            color: #0061F2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>AI Web Apps by Seth Theeke</h1>
+        <p>Apps created with generative AI</p>
+    </header>
+
+    <div class="intro">
+        <p>Hey! I’m Seth, and I’ve been experimenting with AI to create some cool, interactive web applications. Each one was built solely using generative AI to produce the code, including this one!</p>
+    </div>
+
+    <div class="main-content">
+        <div class="app-card">
+            <img src="app1.jpg" alt="App 1">
+            <h3>Compound Interest Calculator</h3>
+            <p>A Compound Interest Calculator that supports multiple accounts</p>
+            <a href="compound-interest-calculator">Try It</a>
+        </div>
+
+        <div class="app-card">
+            <img src="app2.jpg" alt="App 2">
+            <h3>Focus Timer</h3>
+            <p>A Basic Focus Timer</p>
+            <a href="focus-timer">Explore It</a>
+        </div>
+    </div>
+
+    <div class="contact">
+        <p>If you’d like to chat about my projects or just say hi, feel free to <a href="mailto:seththeeke@gmail.com">get in touch!</a></p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Seth Theeke. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

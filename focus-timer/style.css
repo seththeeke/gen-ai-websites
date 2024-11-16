@@ -1,0 +1,143 @@
+/* Importing a softer, modern font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+/* Circular Gradient Background with Dark to Light Transition */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  background: radial-gradient(circle, #1e1f47, #2d1558, #2b1e4b, #17686e); /* Darker outer colors transitioning to lighter center */
+  background-size: cover;
+  position: relative;
+}
+
+/* Timer and Controls */
+.timer-container {
+  text-align: center;
+  position: relative;
+}
+
+/* Title Styling */
+h1 {
+  color: #ffffff;
+  font-size: 2em;
+  margin-bottom: 20px;
+  transition: opacity 0.3s;
+}
+
+#input-section {
+  margin-bottom: 15px;
+}
+
+input[type="number"] {
+  padding: 12px;
+  font-size: 1.2em;
+  border: 2px solid #3a7d92;
+  border-radius: 5px;
+  background-color: #1b1f3b;
+  color: white;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 1.2em;
+  background-color: #643a94;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 0 5px;
+}
+
+button:hover {
+  background-color: #4a2a70;
+}
+
+/* Ripple Pulse Animation with Slower Speed */
+@keyframes ripple-pulse {
+    0% {
+      transform: translate(-50%, -50%) scale(0.5);
+      opacity: 0.6;
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.5); /* Slower scale expansion */
+      opacity: 0.3;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(3); /* Make it expand slower */
+      opacity: 0;
+    }
+}
+  
+/* Apply the slower speed in the pulse */
+.timer-pulse::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2000px;
+    height: 2000px;
+    border-radius: 50%;
+    background: rgba(100, 58, 148, 0.5);
+    animation: ripple-pulse 6s infinite; /* Increased duration for slower effect */
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+/* Keep timer pulse at the very back */
+.timer-pulse::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2000px;
+    height: 2000px;
+    border-radius: 50%;
+    background: rgba(100, 58, 148, 0.5);
+    animation: ripple-pulse 6s infinite; /* Increased duration for slower effect */
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Ensure ripple stays behind the timer */
+  }
+  
+  /* Timer Display */
+  .timer-display {
+    font-family: 'Poppins', sans-serif; /* Softer font style */
+    font-size: 10em; /* Significantly larger timer */
+    color: #ffffff;
+    background: none;
+    border-radius: 50%; /* Ensure the pulse is circular */
+    padding: 30px;
+    transition: box-shadow 0.3s ease-in-out;
+    opacity: 1;
+    position: relative; /* Ensure positioning for the ripple */
+    z-index: 1; /* Keep the timer in front of the pulse */
+  }
+  
+  /* Pause Button Styling */
+  #pauseButton {
+    display: none;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 18px;
+    font-size: 1em;
+    background-color: rgba(58, 125, 146, 0.8); /* Subtle transparent blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 10; /* Make sure the button is on top of the ripple */
+  }
+  
+  #pauseButton:hover {
+    background-color: rgba(58, 125, 146, 1);
+  }
+  
+  

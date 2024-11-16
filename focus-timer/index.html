@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Timer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="timer-container">
+    <h1 id="title">Focus Timer</h1>
+    <div id="input-section">
+      <input type="number" id="minutes" placeholder="Enter minutes" min="1">
+      <button onclick="startTimer()">Start Timer</button>
+    </div>
+    <div class="timer-display" id="timer-display">00:00</div>
+  </div>
+  <button id="pauseButton" onclick="togglePause()">Pause</button>
+
+  <audio id="chime-sound" src="timer-end.wav" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
